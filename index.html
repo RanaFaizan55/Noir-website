@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOIR — Premium menswear. Tailored essentials for the modern gentleman.">
+  <title>NOIR — Premium Menswear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">NOIR</span>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="NOIR Home">NOIR</a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#collections" class="nav-link">Collections</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn cart-toggle" id="cartToggle" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+      <div class="search-panel">
+        <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+        <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag reveal">Spring / Summer 2026</p>
+        <h1 class="hero-title reveal">Refined Style,<br><em>Effortless</em> Presence</h1>
+        <p class="hero-sub reveal">Curated menswear crafted for the discerning modern gentleman.</p>
+        <div class="hero-actions reveal">
+          <a href="#shop" class="btn btn-primary">Shop Collection</a>
+          <a href="#collections" class="btn btn-outline">View Lookbook</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container features-grid">
+        <div class="feature reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Premium Quality</h3>
+          <p>Finest fabrics sourced from Italy and Japan</p>
+        </div>
+        <div class="feature reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <h3>Free Shipping</h3>
+          <p>Complimentary delivery on orders over $150</p>
+        </div>
+        <div class="feature reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><path d="M21 3v6h-6"/></svg>
+          <h3>Easy Returns</h3>
+          <p>30-day hassle-free return policy</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Our Products</span>
+          <h2 class="section-title">Shop the Edit</h2>
+        </div>
+
+        <div class="shop-toolbar reveal">
+          <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Product categories">
+            <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-tab" data-category="shirts" role="tab">Shirts</button>
+            <button class="filter-tab" data-category="pants" role="tab">Pants</button>
+            <button class="filter-tab" data-category="jackets" role="tab">Jackets</button>
+            <button class="filter-tab" data-category="shoes" role="tab">Shoes</button>
+            <button class="filter-tab" data-category="accessories" role="tab">Accessories</button>
+          </div>
+          <select class="sort-select" id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="productGrid" role="list"></div>
+      </div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Curated</span>
+          <h2 class="section-title">Featured Collections</h2>
+        </div>
+        <div class="collections-grid">
+          <a href="#shop" class="collection-card collection-large reveal" data-filter="jackets">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Outerwear collection" loading="lazy">
+            <div class="collection-info">
+              <span>Outerwear</span>
+              <h3>Winter Essentials</h3>
+            </div>
+          </a>
+          <a href="#shop" class="collection-card reveal" data-filter="shirts">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b23?w=600&q=80" alt="Shirts collection" loading="lazy">
+            <div class="collection-info">
+              <span>Shirts</span>
+              <h3>Office Ready</h3>
+            </div>
+          </a>
+          <a href="#shop" class="collection-card reveal" data-filter="shoes">
+            <img src="https://images.unsplash.com/photo-1614252238916-80c5165b72a5?w=600&q=80" alt="Footwear collection" loading="lazy">
+            <div class="collection-info">
+              <span>Footwear</span>
+              <h3>Step Up</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="NOIR brand story" loading="lazy">
+        </div>
+        <div class="about-content reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Crafted for Confidence</h2>
+          <p>NOIR was born from a simple belief: every man deserves clothing that feels as good as it looks. We partner with master tailors and heritage mills to deliver pieces that transcend seasons.</p>
+          <p>From boardroom to weekend, our collections are designed to move with you — timeless silhouettes, impeccable fit, and understated luxury.</p>
+          <a href="#shop" class="btn btn-primary">Explore Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-inner reveal">
+        <h2>Join the Inner Circle</h2>
+        <p>Be first to know about new arrivals, exclusive offers, and style guides.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo">NOIR</span>
+        <p>Premium menswear for the modern gentleman.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#shop">Best Sellers</a></li>
+          <li><a href="#collections">Collections</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 NOIR. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Bag <span id="cartItemCount">(0)</span></h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout</button>
+      <button class="btn btn-outline btn-full" id="continueShopping">Continue Shopping</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Product Modal -->
+  <dialog class="product-modal" id="productModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close product details">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+  </dialog>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
